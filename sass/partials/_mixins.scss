@@ -1,0 +1,59 @@
+// Mixins are functions that we can pass values into
+
+@mixin tiny-screen() {
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin small-screen() {
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin medium-screen() {
+    @media only screen and (max-width: 680px) {
+        @content;
+    }
+}
+
+@mixin large-screen() {
+    @media only screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin background-diagonal_stripes_even($color:$navy1) {
+    $light_color: lighten($color, 10%);
+    background-color: $color;
+    background-image: repeating-linear-gradient(135deg, $light_color, $light_color 25%, transparent 25%, transparent 50%);
+    background-size: 30px 30px;
+    background-attachment: fixed;
+}
+
+@mixin background-pattern($image) {
+    background-image: url($image);
+}
+
+@mixin warning {
+    background-color: $orange1;
+    color: $white;
+}
+
+@mixin fancy-links {
+    a {
+        font-style: italic;
+        text-decoration: none;
+    }
+}
+
+@mixin box($radius: 9px, $border: 1px solid $black) {
+    @include border-radius($radius);
+    border: $border;
+}
+
+@mixin google-font($font) {
+    $font: unquote($font);
+    @import url(https://fonts.googleapis.com/css?family=#{$font});
+}

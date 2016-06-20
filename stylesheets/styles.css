@@ -1,0 +1,205 @@
+body {
+  font-family: "Lato", helvetica, arial, verdana, sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: #C5CAE9;
+}
+a:hover, a:focus {
+  color: #eaecf7;
+}
+a:visited {
+  color: #a0a8db;
+}
+
+#header {
+  height: 60rem;
+}
+
+.section {
+  background: rgba(52, 152, 192, 0.8);
+  min-height: 300px;
+  width: auto;
+  padding: 20px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.nav {
+  text-align: center;
+}
+
+#main {
+  padding: 0;
+  margin: 0;
+  top: 330px;
+}
+
+body {
+  position: relative;
+  background-color: #5A4234;
+  background-image: repeating-linear-gradient(135deg, #7a5a47, #7a5a47 25%, transparent 25%, transparent 50%);
+  background-size: 30px 30px;
+  background-attachment: fixed;
+}
+
+.banner {
+  position: fixed;
+  height: 300px;
+  padding: 0;
+}
+.banner img {
+  z-index: 112;
+  height: 400px;
+  width: 100%;
+}
+
+#sidebar {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+#sidebar .profile-area {
+  top: 0vw;
+  height: 400px;
+  width: auto;
+  opacity: 1;
+}
+#sidebar .profile-area label {
+  color: #ffffff;
+  font-size: 2vw;
+}
+#sidebar .profile-area img {
+  width: 400px;
+  height: auto;
+  text-align: center;
+}
+#sidebar .profile-area h1 {
+  padding: 0;
+  margin: 0;
+}
+#sidebar ul.navbar {
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 100%;
+  background: #00BCD4;
+}
+#sidebar ul.navbar li i {
+  vertical-align: middle;
+}
+#sidebar ul.navbar li a {
+  border-bottom: 5px solid rgba(255, 224, 178, 0);
+}
+#sidebar ul.navbar li a:hover, #sidebar ul.navbar li a:focus {
+  background-color: #D7CCC8;
+  color: #003b41;
+  border-bottom: 5px solid #ffe0b2;
+}
+#sidebar ul.navbar li.active {
+  background-color: #D7CCC8;
+  color: #003b41;
+}
+
+.footer {
+  height: 300px;
+  background: #3498db;
+  padding: 0;
+}
+
+.pattern {
+  width: 22.5rem;
+  margin: 30px;
+  float: left;
+  height: 10rem;
+}
+
+.triangles {
+  background-color: #EEE8D0;
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 5%, #F0ECDB 5%, #90803c);
+  background-size: 20px 20px;
+}
+
+.diagonal_stripes_even {
+  background-color: #161616;
+  background-image: repeating-linear-gradient(135deg, #303030, #303030 25%, transparent 25%, transparent 50%);
+  background-size: 12px 12px;
+}
+
+.diagonal_pinstripes {
+  background-color: #161616;
+  background-image: repeating-linear-gradient(135deg, #303030, #303030 5%, transparent 5%, transparent 50%);
+  background-size: 12px 12px;
+}
+
+.little_circles {
+  background: #2c3e50;
+  background-image: repeating-radial-gradient(circle, #2c3e50, #2c3e50 45%, #1a252f 45%, #1a252f 60%, #2c3e50 60%, #2c3e50 100%);
+  background-size: 20px 20px;
+}
+
+.rough_paper {
+  background: #EEE8D0;
+  background: repeating-radial-gradient(circle, #e0d6ab, #EEE8D0 50%, #EEE8D0 100%);
+  background-size: 20px 20px;
+}
+
+.crosshatch {
+  background-color: #161616;
+  background-image: repeating-linear-gradient(135deg, #303030, #303030 5%, transparent 5%, transparent 50%), repeating-linear-gradient(-135deg, #303030, #303030 5%, transparent 5%, transparent 50%);
+  background-size: 12px 12px;
+}
+
+@media only screen and (max-width: 960px) {
+  #sidebar {
+    left: 83vw;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+}
+/*
+#sidebar {
+    position:fixed;
+    z-index:0;
+    margin-left:74vw;
+    padding:0;
+
+    ul {
+        padding:0;
+        li{
+            list-style: none;
+            a{
+                background: $blue2;
+                line-height: 3rem;
+                display: block;
+                width: auto;
+                border-bottom: 2px solid $brown1;
+                color:$white;
+                &:hover{
+                    background: $pink;
+                };
+                &:active {
+                    background: $aqua1;
+                }
+
+            }
+        }
+    }
+    //background: $blue1;
+    //display:block;
+}
+*/

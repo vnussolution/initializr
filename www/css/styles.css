@@ -1,0 +1,344 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alegreya Sans", helvetica, arial, verdana, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  background: #82c4f8;
+}
+
+a {
+  color: #BBDEFB;
+}
+a:hover, a:focus {
+  color: #ebf5fe;
+}
+a:visited {
+  color: #8bc7f8;
+}
+
+nav .container ul li .activeState {
+  color: #536DFE;
+}
+nav .container ul li .divider {
+  background-color: #B6B6B6;
+}
+
+.jumbotron {
+  margin: 0;
+  padding-bottom: 0;
+  line-height: 3rem;
+}
+
+.container.content .main .row {
+  width: auto;
+}
+.container.content .main .row h2 {
+  margin: 0;
+  padding-top: 50px;
+}
+.container.content .main .row h3 img {
+  height: 60px;
+  width: 60px;
+}
+.container.content .main .row.row1 {
+  background-color: #2196F3;
+}
+.container.content .main .row.row2 {
+  background-color: #0c7cd5;
+}
+.container.content .main .row.row3 {
+  background-color: #0960a5;
+}
+.container.content .main .row.row4 {
+  background-color: #064475;
+}
+.container.content .main .row.row5 {
+  background-color: #042844;
+}
+
+#angularjs {
+  padding-top: 50px;
+  margin: 0 auto;
+}
+#angularjs .day {
+  padding: 10px;
+  font-size: 2rem;
+}
+#angularjs .subnavbar {
+  background: #6e6e6e;
+}
+#angularjs .subnavbar li .activeState {
+  background-color: #3b3b3b;
+}
+#angularjs .subnavbar a:hover {
+  background-color: #545454;
+}
+#angularjs .jumbotron {
+  padding: 0;
+  margin-bottom: 10px;
+}
+#angularjs .jumbotron .weather-map {
+  height: 25px;
+  width: 150px;
+}
+#angularjs .jumbotron .small {
+  height: 40px;
+  width: 40px;
+}
+#angularjs .jumbotron .normal {
+  height: 65px;
+  width: 65px;
+}
+#angularjs .weatherApp, #angularjs .demo2 {
+  margin: 10px;
+  padding: 10px;
+  background: #51adf6;
+  min-height: 80vh;
+}
+#angularjs .weatherApp .panel span, #angularjs .demo2 .panel span {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 3px;
+}
+#angularjs .demo2 .navbar {
+  margin: 0;
+  background-color: #82c4f8;
+}
+#angularjs .demo2 .navbar a {
+  color: #212121;
+}
+#angularjs .demo2 .view {
+  margin: 0;
+  padding: 10px;
+  background: #39a1f4;
+  min-height: 50vh;
+}
+#angularjs .demo2 .view h1 {
+  margin-top: 0;
+}
+#angularjs .demo2 .view span.glyphicon {
+  position: static;
+  /*this trick helps adjust the glyphicon*/
+}
+#angularjs .demo2 .view table {
+  margin-top: 10px;
+}
+#angularjs .demo2 .view table .table-header {
+  background: #2083e4;
+}
+#angularjs .demo2 .view table tr:hover {
+  background-color: #378fe7;
+}
+#angularjs .demo2 .subnavbar li .activeState {
+  background-color: #b2dbfb;
+}
+#angularjs .demo2 .subnavbar a:hover {
+  background-color: white;
+}
+#angularjs .demo2 .slide-animation.ng-enter, #angularjs .demo2 .slide-animation.ng-leave {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position: relative;
+  height: 1000px;
+}
+#angularjs .demo2 .slide-animation.ng-enter {
+  z-index: 100;
+  left: 100px;
+  opacity: 0;
+}
+#angularjs .demo2 .slide-animation.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}
+#angularjs .demo2 .slide-animation.ng-leave {
+  z-index: 101;
+  opacity: 1;
+  left: 0;
+}
+#angularjs .demo2 .slide-animation.ng-leave.ng-leave-active {
+  left: -100px;
+  opacity: 0;
+}
+#angularjs .demo2 .repeat-animation.ng-enter,
+#angularjs .demo2 .repeat-animation.ng-leave,
+#angularjs .demo2 .repeat-animation.ng-move {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position: relative;
+}
+#angularjs .demo2 .repeat-animation.ng-enter {
+  left: 10px;
+  opacity: 0;
+}
+#angularjs .demo2 .repeat-animation.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}
+#angularjs .demo2 .repeat-animation.ng-leave {
+  left: 10px;
+  opacity: 1;
+}
+#angularjs .demo2 .repeat-animation.ng-leave.ng-leave-active {
+  left: -10px;
+  opacity: 0;
+}
+#angularjs .demo2 .repeat-animation.ng-move {
+  opacity: 0.5;
+}
+#angularjs .demo2 .repeat-animation.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+#bootstrap {
+  padding-top: 50px;
+  margin: 0 auto;
+}
+#bootstrap .subnavbar {
+  background: #6e6e6e;
+}
+#bootstrap .subnavbar li .activeState {
+  background-color: #3b3b3b;
+}
+#bootstrap .subnavbar a:hover {
+  background-color: #545454;
+}
+#bootstrap .jumbotron {
+  padding: 0;
+  margin-bottom: 10px;
+}
+#bootstrap .jumbotron .harp {
+  color: #1976D2;
+  background-color: #1976D2;
+}
+#bootstrap .jumbotron .small {
+  height: 40px;
+  width: 40px;
+}
+#bootstrap .jumbotron .normal {
+  height: 65px;
+  width: 65px;
+}
+#bootstrap .restaurant, #bootstrap .mobile-first, #bootstrap .ecommerce {
+  margin: 10px;
+  padding: 10px;
+  background: #51adf6;
+  min-height: 80vh;
+}
+#bootstrap .restaurant .panel span, #bootstrap .mobile-first .panel span, #bootstrap .ecommerce .panel span {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 3px;
+}
+#bootstrap .restaurant .center, #bootstrap .mobile-first .center, #bootstrap .ecommerce .center {
+  float: none;
+  margin: 0 auto;
+}
+#bootstrap .ecommerce .row img {
+  padding: 10px;
+}
+
+#ionic {
+  padding-top: 50px;
+  margin: 0 auto;
+}
+#ionic .subnavbar {
+  background: #6e6e6e;
+}
+#ionic .subnavbar li .activeState {
+  background-color: #3b3b3b;
+}
+#ionic .subnavbar a:hover {
+  background-color: #545454;
+}
+#ionic .jumbotron {
+  padding: 0;
+  margin-bottom: 10px;
+  line-height: 3rem;
+}
+#ionic .jumbotron .firebase {
+  height: 40px;
+  width: 160px;
+}
+#ionic .jumbotron .small {
+  height: 40px;
+  width: 40px;
+}
+#ionic .jumbotron .normal {
+  height: 65px;
+  width: 65px;
+}
+#ionic .inhakhoa {
+  margin: 10px;
+  padding: 10px;
+  background: #51adf6;
+  min-height: 80vh;
+}
+#ionic .inhakhoa .panel span {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 3px;
+}
+#ionic .inhakhoa .center {
+  float: none;
+  margin: 0 auto;
+}
+
+#mvc {
+  padding-top: 50px;
+  margin: 0 auto;
+}
+#mvc .subnavbar {
+  background: #6e6e6e;
+}
+#mvc .subnavbar li .activeState {
+  background-color: #3b3b3b;
+}
+#mvc .subnavbar a:hover {
+  background-color: #545454;
+}
+#mvc .jumbotron {
+  padding: 0;
+  margin-bottom: 10px;
+  line-height: 3rem;
+}
+#mvc .jumbotron .firebase {
+  height: 40px;
+  width: 160px;
+}
+#mvc .jumbotron .small {
+  height: 40px;
+  width: 40px;
+}
+#mvc .jumbotron .normal {
+  height: 65px;
+  width: 65px;
+}
+#mvc .dos {
+  margin: 10px;
+  padding: 10px;
+  background: #51adf6;
+  min-height: 80vh;
+}
+#mvc .dos .panel span {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 3px;
+}
+#mvc .dos .center {
+  float: none;
+  margin: 0 auto;
+}
+
+#secret-resource {
+  margin: 10px;
+  padding: 10px;
+  background: #51adf6;
+  min-height: 80vh;
+}

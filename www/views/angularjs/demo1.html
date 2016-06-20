@@ -1,0 +1,28 @@
+<div class="container content">
+   <div class="main">
+      <div id="row1" class="row row1">
+         <div class="col-md-6">
+            <h1> Demo: using ui-router </h1>
+         </div>
+         <div class="col-md-6">
+            <h3><img src="img/angularjs.png" alt=""/></h3>
+         </div>
+      </div>
+      <div id="row2" class="row row2">
+         <div class="col-md-6">
+          <ul>
+             <li><a ui-sref="angularjs.demo1.ang1">view 1</a> </li>
+             <li><a ui-sref="angularjs.demo1.ang2">view 2</a> </li>
+             <li><a ui-sref="angularjs.demo1.ang3">view 3</a> </li>
+          </ul>
+         </div>
+         <div class="col-md-6">
+            <div ui-view="ang1"></div>
+            <div ui-view="ang11"></div>
+            <div ui-view="ang2"></div>
+            <div ui-view="ang3"></div>
+         </div>
+      </div>
+
+   </div>
+</div>

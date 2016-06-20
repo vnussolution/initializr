@@ -1,0 +1,123 @@
+
+//////////////////////////////color palette/////////////////
+$black: #000;
+$dark-grey: #333;
+$grey: #ccc;
+$light-grey: #ebebeb;
+$off-white: #f5f5f5;
+$white: #ffffff;
+$blue1: #3498db;
+$blue2: #2980b9;
+$red1: #e74c3c;
+$red2: #c0392b;
+$yellow: #FFF9C4;
+$yellow1: #f1c40f;
+$yellow2: #f39c12;
+$green1: #2ecc71;
+$green2: #27ae60;
+$orange: #FFE0B2;
+$orange1: #e67e22;
+$orange2: #d35400;
+$aqua1: #1abc9c;
+$aqua2: #16a085;
+$purple1: #9b59b6;
+$purple2: #8e44ad;
+$navy1: #34495e;
+$navy2: #2c3e50;
+$cyan1: #B2EBF2;
+$cyan2: #00BCD4;
+$cyan3: #0097A7;
+$gray1: #9E9E9E;
+$gray2: #616161;
+$pink:#F8BBD0;
+$pink1:#E81D62;
+$pink2:#C2185B;
+$brown:#D7CCC8;
+$brown1:#795548;
+$brown2:#5D4037;
+
+// =======THEME=========
+//http://www.materialpalette.com/light-blue/light-blue
+// allowed values: CYAN, INDIGO, BLUE, YELLOW, BROWN, ORANGE, GREEN
+
+$theme: BLUE;
+
+$primary-color-dark:   #0288D1;
+$primary-color:        #03A9F4;
+$primary-color-light:  #B3E5FC;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #03A9F4;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
+
+
+// setting theme
+@if $theme ==CYAN{
+    $primary-color-dark:   #0097A7;
+    $primary-color:        #00BCD4;
+    $primary-color-light:  #B2EBF2;
+    $primary-color-text:   #FFFFFF;
+    $accent-color:         #00BCD4;
+}
+@else if $theme == INDIGO{
+    $primary-color-dark:   #303F9F;
+    $primary-color:        #3F51B5;
+    $primary-color-light:  #C5CAE9;
+    $primary-color-text:   #FFFFFF;
+    $accent-color:         #536DFE;
+}
+@else if $theme == BLUE{
+    $primary-color-dark:   #1976D2;
+    $primary-color:        #2196F3;
+    $primary-color-light:  #BBDEFB;
+    $primary-color-text:   #FFFFFF;
+    $accent-color:         #536DFE;
+}
+@else if $theme == GREEN{
+    $primary-color-dark:   #388E3C;
+    $primary-color:        #4CAF50;
+    $primary-color-light:  #C8E6C9;
+    $primary-color-text:   #FFFFFF;
+    $accent-color:         #536DFE;
+}
+@else if $theme == ORANGE{
+    $primary-color-dark:   #E64A19;
+    $primary-color:        #FF5722;
+    $primary-color-light:  #FFCCBC;
+    $primary-color-text:   #FFFFFF;
+    $accent-color:         #FF5722;
+}
+@else if $theme == BROWN{
+    $primary-color-dark:   #5D4037;
+    $primary-color:        #795548;
+    $primary-color-light:  #D7CCC8;
+    $primary-color-text:   #FFFFFF;
+    $accent-color:         #795548;
+}
+@else if $theme == YELLOW {
+    $primary-color-dark:   #FBC02D;
+    $primary-color:        #FFEB3B;
+    $primary-color-light:  #FFF9C4;
+    $primary-color-text:   #212121;
+    $accent-color:         #FFEB3B;
+}
+
+// Background
+$primary-background: $white;
+$secondary-background: $light-grey;
+$inverse-background: $primary-color;
+
+//Links
+$primary-link-color: $accent-color;
+$primary-link-color-hover: darken($accent-color,15%);
+
+//Borders
+$border-color: $divider-color;
+$border-focus: darken($divider-color,15%);
+
+//Typography
+$body-font: 'Alegreya Sans', helvetica, arial, verdana, sans-serif;
+$heading-font: "Titillium Web", helvetica, arial, verdana, sansserif;
+
+//////////////////////////////MIXINS/////////////////

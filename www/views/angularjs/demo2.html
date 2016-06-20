@@ -1,0 +1,27 @@
+<div class="demo2">
+   <div class="jumbotron">
+      <div class="container">
+         <h2>This app is built with <img class="small" src="./img/angularjs.png" alt=""/> + <img class="small" src="./img/bootstrap-icon.png" alt=""/> +
+            <a><img class="normal" src="./img/nodejs-128.png" alt=""/> </a>
+         </h2>
+      </div>
+   </div>
+
+   <div id="row1" class="row">
+      <div class="col-sm-12">
+         <nav class="navbar subnavbar" role="navigation">
+            <div class="navbar nav">
+               <ul class="nav navbar-nav">
+                  <li><a ui-sref-active="activeState" ui-sref="angularjs.demo2.customers">Customers</a></li>
+                  <li><a ui-sref-active="activeState" ui-sref="angularjs.demo2.orders">Orders</a></li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </div>
+   <div id="row2" class="row">
+      <div class="col-md-12">
+         <div class="view slide-animation" ui-view></div>
+      </div>
+   </div>
+</div>

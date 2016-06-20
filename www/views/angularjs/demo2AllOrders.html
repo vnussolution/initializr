@@ -1,0 +1,24 @@
+<div class="slide-animation">
+   <h1> Customer orders</h1>
+   <div class="input-group name-filter">
+      <span class="input-group-addon glyphicon glyphicon-filter"></span>
+      <input ng-model="vm.orderFilter.product" ng-change="vm.getOrdersTotal(vm.orderFilter.product)" type="text"
+             class="form-control" placeholder="Search for name" aria-describedby="basic-addon1">
+   </div>
+
+   <table class="table table-hover table-bordered">
+      <tr class="table-header">
+         <th>Product</th>
+         <th>Total</th>
+      </tr>
+      <tr ng-repeat="order in vm.orders | filter: vm.orderFilter.product | orderBy:'product' " class="repeat-animation">
+         <td>{{order.product}}</td>
+         <td>{{order.price * order.quantity | currency}}</td>
+      </tr>
+      <tr ng-class="totalType">
+         <td>+</td>
+         <td>{{vm.ordersTotal | currency}}</td>
+      </tr>
+
+   </table>
+</div>

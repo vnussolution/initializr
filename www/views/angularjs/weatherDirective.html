@@ -1,0 +1,19 @@
+<div class="panel panel-info">
+   <div class="panel-heading">
+      <h3 class="panel-title">{{weatherObject.dt*1000 | date:'EEEE'}}
+         <img ng-src="img/weatherApp/{{weatherObject.weather[0].icon}}.png" alt=""/>
+         <span class="pull-right label label-primary"> {{weatherObject.weather[0].description}}</span>
+      </h3>
+   </div>
+   <div class="panel-body">
+      <span class="label label-info">Day temp : {{convertToStandard({temp:weatherObject.temp.day})}}</span>
+      <span class="label label-default">Night temp : {{convertToStandard({temp:weatherObject.temp.night})}}</span>
+
+      <span class="label label-success">Clouds : {{weatherObject.clouds}}</span>
+      <span class="label label-info">humidity : {{weatherObject.humidity}}</span>
+      <span class="label label-danger">rain  : {{weatherObject.rain || 0 }}</span>
+      <span class="label label-warning">Wind Speed : {{weatherObject.speed}}</span>
+      <span><ng-transclude></ng-transclude></span>
+   </div>
+
+</div>

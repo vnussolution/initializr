@@ -1,0 +1,47 @@
+<div class="weatherApp">
+   <div class="jumbotron">
+      <div class="container">
+         <h2>This demo is built with <img class="small" src="./img/angularjs.png" alt=""/> + <img class="small" src="./img/bootstrap-icon.png" alt=""/> +
+            <a href="http://openweathermap.org/"><img class="weather-map" src="./img/weatherApp/logo_OpenWeatherMap_orange_website.png" alt=""/> </a>
+         </h2>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-sm-4">
+         <form ng-submit="vmWeather.getForecast(vmWeather.city,5)" novalidate>
+            <div class="input-group">
+               <input type="text" ng-model="vmWeather.city" class="form-control" placeholder="Forecast by city">
+            <span class="input-group-btn">
+               <input class="btn btn-default" type="submit" value="Get Forecast" ng-disabled="!vmWeather.city"/>
+            </span>
+            </div>
+            <!-- /input-group -->
+         </form>
+      </div>
+      <div class="col-sm-8">
+         <span class="pull-right day label label-info">{{vmWeather.forecast.list[0].dt *1000 | date:'EEEE, MMMM d, y'}}</span>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-sm-6">
+         <h3>Forecast results for : {{vmWeather.forecast.city.name || 'London'}} {{'( '+ vmWeather.forecast.city.country + ' )'}} </h3>
+      </div>
+      <div class="col-sm-6">
+         <h3 class="pull-right" ng-show="vmWeather.city"> Days:
+            <label ng-class="{'btn btn-primary': vmWeather.days === 2}" ng-click="vmWeather.getForecast(vmWeather.city,2)"> 2</label>
+            |
+            <label ng-class="{'btn btn-primary': vmWeather.days === 5}" ng-click="vmWeather.getForecast(vmWeather.city,5)"> 5</label>
+            |
+            <label ng-class="{'btn btn-primary': vmWeather.days === 7}" ng-click="vmWeather.getForecast(vmWeather.city,7)"> 7</label>
+         </h3>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-sm-12">
+         <hr/>
+         <div class="panel panel-info" ng-repeat="day in vmWeather.forecast.list">
+            <weather-panel weather-object="day" convert-to-standard="vmWeather.convertToFahrenheit(temp)">*</weather-panel>
+         </div>
+      </div>
+   </div>
+</div>

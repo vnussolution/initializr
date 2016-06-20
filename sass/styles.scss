@@ -1,0 +1,450 @@
+@import "compass";
+@import "partials/variables";
+//@import "partials/normalize";
+@import "partials/mixins";
+@import "partials/base";
+@import "compass/css3";
+
+//use google font for $body-font in _variables.scss
+//@include google-font('Alegreya+Sans');
+//@include google-font('Titillium+Web');
+
+//<editor-fold desc="_base.scss">
+//Layout
+$line-height: 2rem;
+$font-size: 1rem;
+$margin: 1rem;
+$padding: 1rem;
+
+// Fixes overlapping issues
+// Makes the rendered box elements padding, borders, etc.
+// fit into the width
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $body-font;
+    font-size: $font-size * 1.6;
+    line-height: $line-height;
+    background: lighten($primary-color, 20%);
+
+}
+
+a {
+    color: $primary-color-light;
+    &:hover, &:focus {
+        color: lighten($primary-color-light, 10%);
+    }
+    &:visited {
+        color: darken($primary-color-light, 10%);
+    }
+}
+
+//</editor-fold>
+
+/////////////////////// styles.scss ///////////////////////////////
+nav {
+    .container {
+        ul {
+            li {
+                .activeState {
+                    color: $accent-color;
+                }
+                .divider {
+                    background-color: $divider-color;
+                }
+            }
+        }
+    }
+}
+
+.jumbotron {
+    margin: 0;
+    padding-bottom: 0;
+    line-height: $line-height *1.5;
+    // border-radius:29px !important;
+}
+
+.container.content {
+    .main {
+        .row {
+            // height: 800px;
+            width: auto;
+            h2 {
+                margin: 0;
+                padding-top: 50px;
+            }
+            h3 {
+                img {
+                    height: 60px;
+                    width: 60px;
+                }
+            }
+        }
+        .row.row1 {
+            background-color: $primary-color;
+        }
+        .row.row2 {
+            background-color: darken($primary-color, 10%);
+        }
+        .row.row3 {
+            background-color: darken($primary-color, 20%);
+        }
+        .row.row4 {
+            background-color: darken($primary-color, 30%);
+        }
+        .row.row5 {
+            background-color: darken($primary-color, 40%);
+        }
+    }
+}
+
+#angularjs {
+    padding-top: 50px;
+    margin: 0 auto;
+    .day{
+        padding:10px;
+        //margin:20px;
+        font-size: $font-size *2;
+    }
+    .subnavbar {
+        background: lighten($primary-text-color, 30%);
+        li {
+            .activeState {
+                background-color: lighten($primary-text-color, 10%);
+            }
+        }
+        a {
+            &:hover {
+                background-color: lighten($primary-text-color, 20%);
+            }
+        }
+    }
+    .jumbotron {
+        padding:0;
+        margin-bottom:10px;
+        .weather-map { height:25px;width:150px;}
+        .small {
+            height:40px;width:40px;
+        }
+        .normal {
+            height:65px;width:65px;
+        }
+    }
+    .weatherApp, .demo2 {
+        margin: 10px;
+        padding: 10px;
+        background: lighten($primary-color,10%);
+        min-height: 80vh;
+        .panel {
+            span{
+                font-size: $font-size *1.5;
+                display: inline-block;
+                margin: 3px;
+            }
+        }
+    }
+    .demo2 {
+        .navbar {
+            margin:0;
+
+            background-color: lighten($primary-color,20%);
+            a {
+                color:$primary-text-color;
+            }
+        }
+        .view {
+            h1{
+                margin-top:0;
+            }
+            margin:0;
+            padding:10px;
+            background: lighten($primary-color,5%);
+            min-height:50vh;
+            span.glyphicon {
+                position: static;  /*this trick helps adjust the glyphicon*/
+            }
+
+            table {
+                margin-top:10px;
+                .table-header {
+                    background: lighten($primary-color-dark,5%);
+                }
+                tr:hover {
+                    background-color:lighten($primary-color-dark,10%);
+                }
+            }
+        }
+        .subnavbar {
+            li {
+                .activeState {
+                    background-color: lighten($primary-color, 30%);
+                }
+            }
+            a {
+                &:hover {
+                    background-color: lighten($primary-color, 60%);
+                }
+            }
+        }
+
+        //<editor-fold desc=" Animation - Used in customers demo2">
+        /////////////////// Used in demo2 ////////////////////////////////////
+        .slide-animation.ng-enter, .slide-animation.ng-leave {
+            -webkit-transition: 0.5s linear all;
+            -moz-transition: 0.5s linear all;
+            -o-transition: 0.5s linear all;
+            transition: 0.5s linear all;
+            position:relative;
+            height: 1000px;
+        }
+
+        .slide-animation.ng-enter {
+            z-index:100;
+            left:100px;
+            opacity:0;
+        }
+
+        .slide-animation.ng-enter.ng-enter-active {
+            left:0;
+            opacity:1;
+        }
+
+        .slide-animation.ng-leave {
+            z-index:101;
+            opacity:1;
+            left:0;
+        }
+
+        .slide-animation.ng-leave.ng-leave-active {
+            left:-100px;
+            opacity:0;
+        }
+
+
+        .repeat-animation.ng-enter,
+        .repeat-animation.ng-leave,
+        .repeat-animation.ng-move {
+            -webkit-transition: 0.5s linear all;
+            -moz-transition: 0.5s linear all;
+            -o-transition: 0.5s linear all;
+            transition: 0.5s linear all;
+            position:relative;
+        }
+
+        .repeat-animation.ng-enter {
+            left:10px;
+            opacity:0;
+        }
+        .repeat-animation.ng-enter.ng-enter-active {
+            left:0;
+            opacity:1;
+        }
+
+        .repeat-animation.ng-leave {
+            left:10px;
+            opacity:1;
+        }
+        .repeat-animation.ng-leave.ng-leave-active {
+            left:-10px;
+            opacity:0;
+        }
+
+        .repeat-animation.ng-move {
+            opacity:0.5;
+        }
+        .repeat-animation.ng-move.ng-move-active {
+            opacity:1;
+        }
+        ///////////////////////////////////////////////////////
+        //</editor-fold>
+
+
+    }
+}
+
+#bootstrap {
+    padding-top: 50px;
+    margin: 0 auto;
+    .subnavbar {
+        background: lighten($primary-text-color, 30%);
+        li {
+            .activeState {
+                background-color: lighten($primary-text-color, 10%);
+            }
+        }
+        a {
+            &:hover {
+                background-color: lighten($primary-text-color, 20%);
+            }
+        }
+    }
+    .jumbotron {
+        padding:0;
+        margin-bottom:10px;
+        .harp { color:$primary-color-dark;background-color:$primary-color-dark;}
+        .small {
+            height:40px;width:40px;
+        }
+        .normal {
+            height:65px;width:65px;
+        }
+
+    }
+    .restaurant, .mobile-first, .ecommerce {
+        margin: 10px;
+        padding: 10px;
+        background: lighten($primary-color,10%);
+        min-height: 80vh;
+        .panel {
+            span{
+                font-size: $font-size *1.5;
+                display: inline-block;
+                margin: 3px;
+            }
+        }
+        .center{
+            float:none;
+            margin: 0 auto;
+        }
+    }
+    .ecommerce {
+       .row img{
+           padding: 10px;
+       }
+    }
+
+
+}
+
+#ionic {
+    padding-top: 50px;
+    margin: 0 auto;
+    .subnavbar {
+        background: lighten($primary-text-color, 30%);
+        li {
+            .activeState {
+                background-color: lighten($primary-text-color, 10%);
+            }
+        }
+        a {
+            &:hover {
+                background-color: lighten($primary-text-color, 20%);
+            }
+        }
+    }
+    .jumbotron {
+        padding:0;
+        margin-bottom:10px;
+        .firebase {  height:40px;width:160px;}
+        .small {
+            height:40px;width:40px;
+        }
+        .normal {
+            height:65px;width:65px;
+        }
+        line-height: $line-height *1.5;
+    }
+    .inhakhoa {
+        margin: 10px;
+        padding: 10px;
+        background: lighten($primary-color,10%);
+        min-height: 80vh;
+        .panel {
+            span{
+                font-size: $font-size *1.5;
+                display: inline-block;
+                margin: 3px;
+            }
+        }
+        .center{
+            float:none;
+            margin: 0 auto;
+        }
+    }
+}
+
+#mvc {
+    padding-top: 50px;
+    margin: 0 auto;
+    .subnavbar {
+        background: lighten($primary-text-color, 30%);
+        li {
+            .activeState {
+                background-color: lighten($primary-text-color, 10%);
+            }
+        }
+        a {
+            &:hover {
+                background-color: lighten($primary-text-color, 20%);
+            }
+        }
+    }
+    .jumbotron {
+        padding:0;
+        margin-bottom:10px;
+        .firebase {  height:40px;width:160px;}
+        .small {
+            height:40px;width:40px;
+        }
+        .normal {
+            height:65px;width:65px;
+        }
+        line-height: $line-height *1.5;
+    }
+    .dos {
+        margin: 10px;
+        padding: 10px;
+        background: lighten($primary-color,10%);
+        min-height: 80vh;
+        .panel {
+            span{
+                font-size: $font-size *1.5;
+                display: inline-block;
+                margin: 3px;
+            }
+        }
+        .center{
+            float:none;
+            margin: 0 auto;
+        }
+    }
+}
+
+#secret-resource {
+    margin: 10px;
+    padding: 10px;
+    background: lighten($primary-color,10%);
+    min-height: 80vh;
+    //.panel {
+    //    span{
+    //        font-size: $font-size *1.5;
+    //        display: inline-block;
+    //        margin: 3px;
+    //    }
+    //}
+    //.center{
+    //    float:none;
+    //    margin: 0 auto;
+    //}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

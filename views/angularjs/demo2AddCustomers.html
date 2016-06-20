@@ -1,0 +1,224 @@
+<div class="slide-animation">
+   <h1> Add Customer</h1>
+   <div class="row">
+      <div class="col-sm-6">
+         <!-- FORM ============ -->
+         <form name="userForm" ng-submit="vm.submitForm(userForm)" novalidate>
+            <!-- NAME -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+               <label>Name</label>
+               <input type="text" name="name" class="form-control" ng-model="vm.user.name" required>
+               <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
+            </div>
+            <!-- USERNAME -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+               <label>Username</label>
+               <input type="text" name="username" class="form-control" ng-model="vm.user.username" ng-minlength="3" ng-maxlength="8">
+               <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+               <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+            </div>
+            <!-- ADDRESS -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.Address.$invalid && !userForm.Address.$pristine }">
+               <label>Address</label>
+               <input type="text" name="Address" class="form-control" ng-model="vm.user.Address" ng-minlength="3" ng-maxlength="20" required>
+               <p ng-show="userForm.username.$error.minlength" class="help-block">Address is too short.</p>
+               <p ng-show="userForm.username.$error.maxlength" class="help-block">Address is too long.</p>
+            </div>
+            <!-- EMAIL -->
+            <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+               <label>Email</label>
+               <input type="email" name="email" class="form-control" ng-model="vm.user.email">
+               <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+            </div>
+            <button data-toggle="modal" data-target=".bs-example-modal-sm" type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+         </form>
+      </div>
+      <div class="col-sm-6">
+         <!-- VALIDATION TABLES ======== -->
+         <div class="row">
+            <div class="col-xs-3">
+               <h3>Form</h3>
+               <table class="table table-bordered">
+                  <tbody>
+                  <tr>
+                     <td ng-class="{ success: userForm.$valid, danger: userForm.$invalid }">Valid</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.$pristine, danger: !userForm.$pristine }">Pristine</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.$dirty }">Dirty</td>
+                  </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="col-xs-3">
+               <h3>Name</h3>
+               <table class="table table-bordered">
+                  <tbody>
+                  <tr>
+                     <td ng-class="{ success: userForm.name.$valid, danger: userForm.name.$invalid }">Valid</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.name.$pristine, danger: !userForm.name.$pristine }">Pristine</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.name.$dirty }">Dirty</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.name.$touched }">Touched</td>
+                  </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="col-xs-3">
+               <h3>Username</h3>
+               <table class="table table-bordered">
+                  <tbody>
+                  <tr>
+                     <td ng-class="{ success: userForm.username.$valid, danger: userForm.username.$invalid }">Valid</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.username.$pristine, danger: !userForm.username.$pristine }">Pristine</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.username.$dirty }">Dirty</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.username.$touched }">Touched</td>
+                  </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="col-xs-3">
+               <h3>Email</h3>
+               <table class="table table-bordered">
+                  <tbody>
+                  <tr>
+                     <td ng-class="{ success: userForm.email.$valid, danger: userForm.email.$invalid }">Valid</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.email.$pristine, danger: !userForm.email.$pristine }">Pristine</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.email.$dirty }">Dirty</td>
+                  </tr>
+                  <tr>
+                     <td ng-class="{ success: userForm.email.$touched }">Touched</td>
+                  </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+
+      </div>
+
+   </div>
+   <div class="row">
+      <div class="col-sm-6">
+         <br/>
+         <ul>
+            <li>Name is required</li>
+            <li>Username is not required, minimum length 3, maximum length 8</li>
+            <li>Address is required, minimum length 3, maximum length 20</li>
+            <li>Email is not required, but has to be a valid email</li>
+            <li> Form submit is disabled if the form is not valid</li>
+            <li>Show a required or invalid email error</li>
+         </ul>
+      </div>
+      <div class="col-sm-6">
+         <div class="table-responsive">
+            <table class="table table-bordered">
+               <thead>
+               <tr>
+                  <td>
+                     Property
+                  </td>
+                  <td>
+                     Class
+                  </td>
+                  <td>
+                     Description
+                  </td>
+               </tr>
+               </thead>
+               <tbody>
+               <tr>
+                  <td class="success">
+                     $valid
+                  </td>
+                  <td>
+                     ng-valid
+                  </td>
+                  <td>
+                     <em class="text-info">Boolean</em> Tells whether an item is currently valid based on the rules you placed.
+                  </td>
+               </tr>
+               <tr>
+                  <td class="danger">
+                     $invalid
+                  </td>
+                  <td>
+                     ng-invalid
+                  </td>
+                  <td>
+                     <em class="text-info">Boolean</em> Tells whether an item is currently invalid based on the rules you placed.
+                  </td>
+               </tr>
+               <tr>
+                  <td class="active">
+                     $pristine
+                  </td>
+                  <td>
+                     ng-pristine
+                  </td>
+                  <td>
+                     <em class="text-info">Boolean</em> True if the form/input <strong>has not</strong> been used yet.
+                  </td>
+               </tr>
+               <tr>
+                  <td class="warning">
+                     $dirty
+                  </td>
+                  <td>
+                     ng-dirty
+                  </td>
+                  <td>
+                     <em class="text-info">Boolean</em> True if the form/input <strong>has</strong> been used.
+                  </td>
+               </tr>
+               <tr>
+                  <td class="warning">
+                     $touched
+                  </td>
+                  <td>
+                     ng-touched
+                  </td>
+                  <td>
+                     <em class="text-info">Boolean</em> True if the input <strong>has</strong> been blurred.
+                  </td>
+               </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-sm-6">
+         <h3>This page was inspired by Useful links</h3>
+         <ul>
+            <li><a href="http://getbootstrap.com/javascript/#modals-events">http://getbootstrap.com/javascript/#modals-events</a></li>
+            <li><a href="https://codepen.io/Javarome/post/angularjs-page-transitions">https://codepen.io/Javarome/post/angularjs-page-transitions</a></li>
+            <li><a href="https://scotch.io/tutorials/angularjs-form-validation">https://scotch.io/tutorials/angularjs-form-validation</a></li>
+         </ul>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+   <div class="modal-dialog modal-md">
+      <div class="modal-content">
+         <h2> The user {{vm.user.name}} has been added.</h2>
+      </div>
+   </div>
+</div>
